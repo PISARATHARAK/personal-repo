@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business capabilities</title>
+<style>
+  :root { --ink:#1f2547; --ink2:#4a5070; --line:#cdd2d6; --shadow:0 2px 6px rgba(20,30,60,.10),0 1px 1px rgba(20,30,60,.06); }
+  * { box-sizing:border-box; }
+  html, body { margin:0; background:linear-gradient(135deg,#f3f5f3,#e8ecea); min-height:100%; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); padding:24px 16px; }
+  #wrap { width:100%; max-width:1100px; margin:0 auto; }
+  #stage { position:relative; width:1100px; height:590px; transform-origin:top left; }
+
+  .title { position:absolute; left:20px; top:18px; font-size:24px; font-weight:700; }
+  .title span { font-weight:500; color:var(--ink2); }
+
+  .panel { position:absolute; top:70px; height:416px; border-radius:20px; border:1px solid #d5dad8; background:rgba(255,255,255,.55); }
+  .panel .head { position:absolute; left:20px; top:14px; font-size:13px; font-weight:700; letter-spacing:.07em; color:#5a6078; text-transform:uppercase; }
+
+  .card { position:absolute; width:200px; height:160px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:14px 16px; display:flex; flex-direction:column; gap:10px; }
+  .t { display:flex; align-items:center; gap:10px; font-size:19px; font-weight:700; line-height:1.2; }
+  .d { font-size:15px; line-height:1.45; color:var(--ink2); }
+  .li { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:500; line-height:1.2; }
+  .list { display:flex; flex-direction:column; gap:8px; }
+  .amber { background:#fff7ea; border-color:#e0b36f; } .amber .t { color:#8a5a12; }
+  .green { background:#f1f7ee; border-color:#9bbf8a; } .green .t { color:#2f5d22; }
+  .need { width:214px; } .res { width:174px; }
+
+  .ic { width:24px; height:24px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .li .ic { width:20px; height:20px; color:#4a4f6e; }
+  img.logo { width:20px; height:20px; flex:none; object-fit:contain; }
+  .t .ic { color:#4a4f7a; } .amber .t .ic { color:#a56a14; } .green .t .ic { color:#3c7a2b; }
+
+  .always { position:absolute; left:20px; top:510px; width:1060px; height:56px; border-radius:14px; border:1px solid #d28f8f; background:#fcefef; display:flex; align-items:center; justify-content:center; gap:14px; font-size:18px; font-weight:600; color:#8a1f1f; box-shadow:var(--shadow); }
+  .always .ic { color:#9b2c2c; }
+
+  svg.wires { position:absolute; z-index:5; inset:0; width:1100px; height:590px; pointer-events:none; }
+  svg.wires line { stroke-width:1.8; }
+  .g { stroke:#394150; } .o { stroke:#c0651a; }
+</style>
+</head>
+<body>
+<div id="wrap"><div id="stage" role="img" aria-label="Business capabilities, from a staff question to a sourced answer. Staff need: Find, Understand. What the Knowledge Base does: Search, Read and connect, Answer, Show sources. Result: Faster answers, Answers that can be checked. Always: only content the user can already open, read only, every use is recorded.">
+
+  <div class="title">BUSINESS CAPABILITIES <span>&middot; From a staff question to a sourced answer</span></div>
+
+  <svg class="wires" aria-hidden="true">
+    <defs>
+      <marker id="mg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#394150" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+      <marker id="mo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#c0651a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    </defs>
+    <!-- need -> does -->
+    <line class="o" x1="254" y1="194" x2="328" y2="194" marker-end="url(#mo)"/>
+    <line class="o" x1="254" y1="386" x2="328" y2="386" marker-end="url(#mo)"/>
+    <!-- inside the knowledge base -->
+    <line class="g" x1="532" y1="194" x2="608" y2="194" marker-end="url(#mg)"/>
+    <line class="g" x1="532" y1="386" x2="608" y2="386" marker-end="url(#mg)"/>
+    <!-- does -> result -->
+    <line class="g" x1="812" y1="194" x2="886" y2="194" marker-end="url(#mg)"/>
+    <line class="g" x1="812" y1="386" x2="886" y2="386" marker-end="url(#mg)"/>
+  </svg>
+
+  <!-- Staff need -->
+  <div class="panel" style="left:20px;width:250px;"><div class="head">Staff need</div></div>
+  <div class="card need" style="left:38px;top:114px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Find</div>
+    <div class="d">Pages, tickets, change requests and compliance records</div>
+  </div>
+  <div class="card need" style="left:38px;top:306px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>Understand</div>
+    <div class="d">Designs, delivery status, changes and controls</div>
+  </div>
+
+  <!-- What the Knowledge Base does -->
+  <div class="panel" style="left:310px;width:520px;"><div class="head">What the Knowledge Base does</div></div>
+  <div class="card amber" style="left:330px;top:114px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Search</div>
+    <div class="list">
+      <div class="li"><img class="logo" alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIyNi43OTEiIHgyPSIxMS43OTIiIHkxPSIyOC40NjciIHkyPSIxOS44NTUiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxLjMzNCAtMTguNjY2KSBzY2FsZSg1LjMzMzMxKSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNTJjYyIvPjxzdG9wIG9mZnNldD0iLjkxOCIgc3RvcC1jb2xvcj0iIzIzODBmYiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI2ODRmZiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iNS4yMDkiIHgyPSIyMC4yMDgiIHkxPSIyLjUyMyIgeTI9IjExLjEzNiIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgtMjEuMzM0IC0xOC42NjYpIHNjYWxlKDUuMzMzMzEpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDA1MmNjIi8+PHN0b3Agb2Zmc2V0PSIuOTE4IiBzdG9wLWNvbG9yPSIjMjM4MGZiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjY4NGZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTQuNjU1IDk2LjMwM2EzMzIuMDYxIDMzMi4wNjEgMCAwIDAtNC4wNjIgNi41NzdjLTEuMTU2IDEuOTMzLS41NzggNC40NDggMS4zNTQgNS42MWwyNi40ODQgMTYuMjVjMS45MzQgMS4xNiA0LjQ0My41NzcgNS42MDQtMS4zNTVhMTg1Ljc5OCAxODUuNzk4IDAgMCAxIDMuODY2LTYuNTc5YzEwLjQ0Mi0xNy4yMTMgMjEuMDcxLTE1LjI4IDQwLjAxNC02LjE4NmwyNi4yOTMgMTIuMzc0YzIuMTI0Ljk3IDQuNDQ3IDAgNS40MS0xLjkzM2wxMi41NjktMjguNDNjLjk2My0xLjkzOCAwLTQuNDQ4LTEuOTM5LTUuNDE4LTUuNjA0LTIuNTE2LTE2LjYxOC03Ljc0LTI2LjI4NS0xMi41NzMtMzUuNzYtMTcuMjE5LTY2LjExNC0xNi4wNTctODkuMzA2IDIxLjY2M1ptMCAwIi8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTEyMy4zNDMgMzEuNjk3YTMzMi4wNjEgMzMyLjA2MSAwIDAgMCA0LjA2My02LjU3N2MxLjE2LTEuOTMzLjU3Ny00LjQ0OC0xLjM1NS01LjYxTDk5LjU2NyAzLjI2Yy0xLjkzMy0xLjE2LTQuNDQzLS41NzctNS42MDQgMS4zNTVhMTc4LjA2NiAxNzguMDY2IDAgMCAxLTMuODY1IDYuNTc5Yy0xMC40NDMgMTcuMjEzLTIxLjA3MiAxNS4yOC00MC4wMTUgNi4xODZMMjMuNzkgNS4wMDZjLTIuMTI0LS45Ny00LjQ0MSAwLTUuNDEgMS45MzNMNS44MTYgMzUuMzY5Yy0uOTY4IDEuOTM4IDAgNC40NTQgMS45MzMgNS40MTggNS42MDQgMi41MTYgMTYuNjI0IDcuNzQgMjYuMjg1IDEyLjU3MyAzNS43NjcgMTcuMDI3IDY2LjExNSAxNi4wNTYgODkuMzA3LTIxLjY2M3ptMCAwIi8+PC9zdmc+Cg==">ALM Confluence</div>
+      <div class="li"><img class="logo" alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIyNi43OTEiIHgyPSIxMS43OTIiIHkxPSIyOC40NjciIHkyPSIxOS44NTUiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxLjMzNCAtMTguNjY2KSBzY2FsZSg1LjMzMzMxKSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNTJjYyIvPjxzdG9wIG9mZnNldD0iLjkxOCIgc3RvcC1jb2xvcj0iIzIzODBmYiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI2ODRmZiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJiIiB4MT0iNS4yMDkiIHgyPSIyMC4yMDgiIHkxPSIyLjUyMyIgeTI9IjExLjEzNiIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgtMjEuMzM0IC0xOC42NjYpIHNjYWxlKDUuMzMzMzEpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDA1MmNjIi8+PHN0b3Agb2Zmc2V0PSIuOTE4IiBzdG9wLWNvbG9yPSIjMjM4MGZiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjY4NGZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTQuNjU1IDk2LjMwM2EzMzIuMDYxIDMzMi4wNjEgMCAwIDAtNC4wNjIgNi41NzdjLTEuMTU2IDEuOTMzLS41NzggNC40NDggMS4zNTQgNS42MWwyNi40ODQgMTYuMjVjMS45MzQgMS4xNiA0LjQ0My41NzcgNS42MDQtMS4zNTVhMTg1Ljc5OCAxODUuNzk4IDAgMCAxIDMuODY2LTYuNTc5YzEwLjQ0Mi0xNy4yMTMgMjEuMDcxLTE1LjI4IDQwLjAxNC02LjE4NmwyNi4yOTMgMTIuMzc0YzIuMTI0Ljk3IDQuNDQ3IDAgNS40MS0xLjkzM2wxMi41NjktMjguNDNjLjk2My0xLjkzOCAwLTQuNDQ4LTEuOTM5LTUuNDE4LTUuNjA0LTIuNTE2LTE2LjYxOC03Ljc0LTI2LjI4NS0xMi41NzMtMzUuNzYtMTcuMjE5LTY2LjExNC0xNi4wNTctODkuMzA2IDIxLjY2M1ptMCAwIi8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTEyMy4zNDMgMzEuNjk3YTMzMi4wNjEgMzMyLjA2MSAwIDAgMCA0LjA2My02LjU3N2MxLjE2LTEuOTMzLjU3Ny00LjQ0OC0xLjM1NS01LjYxTDk5LjU2NyAzLjI2Yy0xLjkzMy0xLjE2LTQuNDQzLS41NzctNS42MDQgMS4zNTVhMTc4LjA2NiAxNzguMDY2IDAgMCAxLTMuODY1IDYuNTc5Yy0xMC40NDMgMTcuMjEzLTIxLjA3MiAxNS4yOC00MC4wMTUgNi4xODZMMjMuNzkgNS4wMDZjLTIuMTI0LS45Ny00LjQ0MSAwLTUuNDEgMS45MzNMNS44MTYgMzUuMzY5Yy0uOTY4IDEuOTM4IDAgNC40NTQgMS45MzMgNS40MTggNS42MDQgMi41MTYgMTYuNjI0IDcuNzQgMjYuMjg1IDEyLjU3MyAzNS43NjcgMTcuMDI3IDY2LjExNSAxNi4wNTYgODkuMzA3LTIxLjY2M3ptMCAwIi8+PC9zdmc+Cg==">WPB Confluence</div>
+      <div class="li"><img class="logo" alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImppcmEtb3JpZ2luYWwtYSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyMi4wMzQiIHkxPSI5Ljc3MyIgeDI9IjE3LjExOCIgeTI9IjE0Ljg0MiIgZ3JhZGllbnRUcmFuc2Zvcm09InNjYWxlKDQpIj48c3RvcCBvZmZzZXQ9Ii4xNzYiIHN0b3AtY29sb3I9IiMwMDUyY2MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyNjg0ZmYiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iamlyYS1vcmlnaW5hbC1iIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjE2LjY0MSIgeTE9IjE1LjU2NCIgeDI9IjEwLjk1NyIgeTI9IjIxLjA5NCIgZ3JhZGllbnRUcmFuc2Zvcm09InNjYWxlKDQpIj48c3RvcCBvZmZzZXQ9Ii4xNzYiIHN0b3AtY29sb3I9IiMwMDUyY2MiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyNjg0ZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNMTA4LjAyMyAxNkg2MS44MDVjMCAxMS41MiA5LjMyNCAyMC44NDggMjAuODQ3IDIwLjg0OGg4LjV2OC4yMjZjMCAxMS41MiA5LjMyOCAyMC44NDggMjAuODQ4IDIwLjg0OFYxOS45NzdBMy45OCAzLjk4IDAgMDAxMDguMDIzIDE2em0wIDAiIGZpbGw9IiMyNjg0ZmYiLz48cGF0aCBkPSJNODUuMTIxIDM5LjA0SDM4LjkwMmMwIDExLjUxOSA5LjMyNSAyMC44NDcgMjAuODQ0IDIwLjg0N2g4LjUwNHY4LjIyNmMwIDExLjUyIDkuMzI4IDIwLjg0OCAyMC44NDggMjAuODQ4VjQzLjAxNmEzLjk4MyAzLjk4MyAwIDAwLTMuOTc3LTMuOTc3em0wIDAiIGZpbGw9InVybCgjamlyYS1vcmlnaW5hbC1hKSIvPjxwYXRoIGQ9Ik02Mi4yMTkgNjIuMDc4SDE2YzAgMTEuNTI0IDkuMzI0IDIwLjg0OCAyMC44NDggMjAuODQ4aDguNXY4LjIzYzAgMTEuNTIgOS4zMjggMjAuODQ0IDIwLjg0NyAyMC44NDRWNjYuMDU5YTMuOTg0IDMuOTg0IDAgMDAtMy45NzYtMy45OHptMCAwIiBmaWxsPSJ1cmwoI2ppcmEtb3JpZ2luYWwtYikiLz48L3N2Zz4K">WPB Jira</div>
+      <div class="li"><svg class="ic"  viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>CR-Minion &middot; <svg class="ic"  viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>ICE</div>
+    </div>
+  </div>
+  <div class="card" style="left:610px;top:114px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Read and connect</div>
+    <div class="d">Follow links between pages, tickets and records</div>
+  </div>
+  <div class="card green" style="left:330px;top:306px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>Answer</div>
+    <div class="d">Quick answer or Deep research, by <b style="color:#2f5d22;">GitHub Copilot</b></div>
+  </div>
+  <div class="card" style="left:610px;top:306px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Show sources</div>
+    <div class="d">A link for every statement &middot; gaps stated clearly</div>
+  </div>
+
+  <!-- Result -->
+  <div class="panel" style="left:870px;width:210px;"><div class="head">Result</div></div>
+  <div class="card res" style="left:888px;top:114px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Faster answers</div>
+    <div class="d">One place to ask across all sources</div>
+  </div>
+  <div class="card res" style="left:888px;top:306px;">
+    <div class="t"><svg class="ic"  viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>Answers that can be checked</span></div>
+    <div class="d">Every answer links to its sources</div>
+  </div>
+
+  <!-- Always -->
+  <div class="always"><svg class="ic"  viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>ALWAYS &middot; Only content the user can already open &middot; Read only &middot; Every use is recorded</span></div>
+
+</div></div>
+
+<script>
+  (function () {
+    var wrap = document.getElementById('wrap'), stage = document.getElementById('stage');
+    function fit() {
+      var s = Math.min(1, wrap.clientWidth / 1100);
+      stage.style.transform = 'scale(' + s + ')';
+      wrap.style.height = (590 * s) + 'px';
+    }
+    window.addEventListener('resize', fit); fit();
+  })();
+</script>
+</body>
+</html>
